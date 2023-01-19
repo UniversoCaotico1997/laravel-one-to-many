@@ -11,6 +11,12 @@
     @endif
     <h1>{{$project->title}}</h1>
     <p>{{$project->description}}</p>
+
+    <div class="type">
+        <strong>Type</strong>
+        {{ $project->type ? $project->type->name : 'Uncategorized'}}
+    </div>
+
 </div>
 <div class="d-flex justify-content-end">
     <a href="{{route('admin.projects.index')}}" class="btn btn-info">
